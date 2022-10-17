@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container my-3">
+    <h2>Searched Products</h2>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S. no.</th>
+            <th scope="col">Title</th>
+            <th scope="col">P ID</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+      {% for product_ in allProducts %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{product_.title}}</td>
+        <td>{{product_.pid}}</td>
+      </tr>
+      {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+{% endblock body %}
